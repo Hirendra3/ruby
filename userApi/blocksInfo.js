@@ -13,15 +13,6 @@ const mongoose = require('../config/production'); // Adjust the path accordingly
 
 
 
-const app = express();
-
-// Your route definition
-// ...
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
 
 
 const getHomePageData = async (req, response, next) => {
