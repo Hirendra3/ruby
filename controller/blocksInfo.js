@@ -68,7 +68,7 @@ const getHomePageData = async (req, response, next) => {
     return response.json({ success: 0, error: error.message });
   } finally {
     try {
-      await mongoose.disconnect();
+     // await mongoose.disconnect();
       console.log("MongoDB connection closed.");
     } catch (error) {
       console.error("Error closing MongoDB connection:", error.message);
@@ -152,15 +152,6 @@ const getBlockCount = async (request, response, next) => {
         return response.json({ success: 6, msg: "Error fetching block count" });
     }
 };
-
-
-
-
-
-
-
-
-
 
 
 

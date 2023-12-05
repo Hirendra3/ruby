@@ -36,7 +36,7 @@ const generatenewaddress = async (req, response, next) => {
     console.error('Error:', error.message);
     return response.json({ success: 0, error: error.message }); // Send an error response
   } finally {
-    mongoose.connection.close();
+   // mongoose.connection.close();
     return response.json({ success: 1, result: flattenedResponse });
   }
 };
